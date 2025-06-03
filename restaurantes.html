@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Melhores Restaurantes do Brasil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="topo">
+
+  <header>
+    <h1>Top 3 Restaurantes do Brasil</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="receitas.html">Receitas</a>
+    <a href="restaurantes.html">Restaurantes</a>
+    <a href="curiosidades.html">Curiosidades</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+
+  <main>
+    
+    <section>
+      <h2>1. Origem – Salvador, BA</h2>
+      <div class="carrossel" data-id="origem">
+        <button class="btn-anterior">&#10094;</button>
+        <div class="imagens">
+          <img src="imagens/origem1.webp" alt="Origem 1" class="ativa">
+          <img src="imagens/origem2.webp" alt="Origem 2" >
+          <img src="imagens/origem3.webp" alt="Origem 3" >
+        </div>
+        <button class="btn-proximo">&#10095;</button>
+      </div>
+      <h3>Sobre</h3>
+      <p class="ww">O Origem, em Salvador, é conhecido por reinventar a culinária baiana com ingredientes locais e técnicas modernas. Premiado como o melhor restaurante do Brasil, sua cozinha autoral conquista pelo sabor e apresentação impecável. </p>
+    </section>
+<hr>
+    
+    <section>
+      <h2>2. Lasai – Rio de Janeiro, RJ</h2>
+      <div class="carrossel" data-id="lasai">
+        <button class="btn-anterior">&#10094;</button>
+        <div class="imagens">
+          <img src="imagens/lasai1.webp" alt="Lasai 1" class="ativa">
+          <img src="imagens/lasai2.webp" alt="Lasai 2">
+          <img src="imagens/lasai3.webp" alt="Lasai 3">
+        </div>
+        <button class="btn-proximo">&#10095;</button>
+      </div>
+      <h3>Sobre</h3>
+      <p class="ww">O Lasai, no Rio, aposta em ingredientes sazonais e orgânicos cultivados em sua própria horta. O ambiente intimista e a proposta sustentável conquistam paladares exigentes e fazem do restaurante uma referência na gastronomia brasileira.</p>
+    </section>
+<hr>
+    
+    <section>
+      <h2>3. A Casa do Porco – São Paulo, SP</h2>
+      <div class="carrossel" data-id="porco">
+        <button class="btn-anterior">&#10094;</button>
+        <div class="imagens">
+          <img src="imagens/porco1.jpg" alt="Casa do Porco 1" class="ativa">
+          <img src="imagens/porco2.webp" alt="Casa do Porco 2">
+          <img src="imagens/porco3.jpg" alt="Casa do Porco 3">
+        </div>
+        <button class="btn-proximo">&#10095;</button>
+      </div>
+      <h3>Sobre</h3>
+      <p class="ww">Comandado por Janaína Torres, A Casa do Porco celebra a carne suína com pratos criativos e respeitosos ao ingrediente. Localizada no centro de São Paulo, é reconhecida mundialmente por sua cozinha autêntica e democrática.</p>
+    </section>
+<hr>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Blog de Gastronomia. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.querySelectorAll('.carrossel').forEach(carrossel => {
+      const imagens = carrossel.querySelectorAll('img');
+      const btnAnterior = carrossel.querySelector('.btn-anterior');
+      const btnProximo = carrossel.querySelector('.btn-proximo');
+      let index = 0;
+
+      function mostrarImagem(i) {
+        imagens.forEach((img, idx) => {
+          img.classList.toggle('ativa', idx === i);
+        });
+      }
+
+      btnAnterior.addEventListener('click', () => {
+        index = (index === 0) ? imagens.length - 1 : index - 1;
+        mostrarImagem(index);
+      });
+
+      btnProximo.addEventListener('click', () => {
+        index = (index === imagens.length - 1) ? 0 : index + 1;
+        mostrarImagem(index);
+      });
+
+      mostrarImagem(index);
+    });
+  </script>
+
+</body>
+</html>

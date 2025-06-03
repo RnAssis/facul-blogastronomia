@@ -1,0 +1,150 @@
+
+body {
+  font-family: serif, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0efef91;
+  color: #333;
+}
+
+
+header {
+  background-color: #ffcc80;
+  padding: 5px;
+  text-align: center;
+  
+}
+
+header h1 {
+  font-size: 36px;
+}
+
+
+
+/* Nav */
+nav {
+  background-color: #ffa726;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* main */
+main {
+  padding: 18px;
+}
+
+main h3 {font-size: 25px
+}
+
+main h2 {
+  font-size: 35px;
+}
+
+main p {font-size: 20px;
+}
+
+main h2 {
+  color: #e65100;
+}
+
+
+
+.ww {
+  font-size: 22px;
+}
+
+.destaque {
+  margin-top: 30px;
+}
+
+.destaque img {
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+.destaque p {
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+.ingredientes {
+
+  font-size: 17px;
+}
+
+.modopreparo {
+
+  font-size: 17px;
+}
+
+.carrossel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin-left: 0;
+  margin-right: 0;
+  overflow: hidden;
+}
+
+.carrossel .imagens {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  align-items: start;
+  justify-content: start;
+}
+
+.carrossel img {
+  width: 600px;
+  display: none;
+  border-radius: 10px;
+  border-right: 20px;
+}
+
+.carrossel img.ativa {
+  width: 500px;
+  display: block;
+}
+
+.carrossel .btn-anterior,
+.carrossel .btn-proximo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgb(255, 255, 255);
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+
+.carrossel .btn-anterior {
+  left: 10px;
+}
+
+.carrossel .btn-proximo {
+  right: 110px;
+}
+
+
+
+footer {
+  background-color: #ffcc80;
+  padding: 10px;
+  text-align: center;
+  margin-top: 40px;
+}
